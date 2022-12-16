@@ -1,6 +1,7 @@
 import "./App.css";
 import logo from "./images/logo.png";
 import Button from "./components/Button";
+import Counter from "./components/Counter";
 
 function App() {
   const countClick = () => {
@@ -17,8 +18,17 @@ function App() {
         <img className="logo" src={logo} alt="logo" />
       </div>
       <div className="cointainer-main">
-        <Button text="Click" buttonType="click" buttonFuction={countClick} />
-        <Button text="Reset" buttonType="reset" buttonFuction={resetButton} />
+        <Counter clickNumbers={"5"} />
+        <Button
+          text="Click"
+          buttonType="button-click"
+          buttonFuction={countClick}
+        />
+        <Button
+          text="Reset"
+          buttonType="button-reset"
+          buttonFuction={resetButton}
+        />
       </div>
     </div>
   );
